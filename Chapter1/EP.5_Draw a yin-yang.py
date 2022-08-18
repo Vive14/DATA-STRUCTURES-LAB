@@ -27,3 +27,4 @@ for i in range(n+2):
     for j in range(i):
         s+="."
     print(s)
+

@@ -11,8 +11,8 @@ list = []
 print()
 print()
 
-for x in input_list:
-    x = x.split(" ")
+for i in input_list:
+    x = i.split()
     list.append(x)
     print(x)
 
@@ -20,17 +20,17 @@ print()
 print()
 
 for row in range(len(list)):
-    for cell in range(len(list[row])):
+    for cell in range(len(list)):
         c = list[row][cell]
         if c == "-":
             list[row][cell] = 0
 
 for row in range(len(list)):
-    for cell in range(len(list[row])):
+    for cell in range(len(list)):
         c = list[row][cell]
         if c == "#":
-            for y in range(-1,2): # -1 0 1
-                for x in range(-1, 2):
+            for x in range(-1, 2):
+                 for y in range(-1,2): # -1 0 1
                     case1 = row + y < 0 or cell + x < 0
                     case2 = row + y > 4 or cell + x > 4
                     if case1 or case2:
@@ -44,7 +44,7 @@ for row in range(len(list)):
     for cell in range(len(list[row])):
         c = list[row][cell]
         if c != "#":
-            list[row][cell] = str(c)
-
+            list[row][cell] = str(c)  # ทำให้ # เป็น string
+            
 for x in list:
     print(x)
