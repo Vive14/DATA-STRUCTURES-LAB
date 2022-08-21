@@ -5,7 +5,7 @@ word_memory = []
 
 for i in en_input:
     # print(i) #P apple
-    mode = i.split()
+    mode = i.split()[0]
     print(mode) # P
     if mode == "R":
         word_memory.clear() #clear list
